@@ -37,11 +37,17 @@ public class LeerFichero {
 		
 		// usando implementación propia
 		List<String> lines1 = leerLineaALinea(new File("datos.csv"), Charset.forName("UTF-8"));
-		lines1.stream().forEach(printer);
+		lines1.parallelStream().forEach(l -> {
+			String [] parts = l.split(",");
+			String username = parts[0];
+			String password = parts[1];
+			System.out.println("Usuario: " + username + " / Contraseña: " + password);
+		});
+
 		
 		// usando librería commons-io
-		List<String> lines2 = FileUtils.readLines(new File("datos.csv"), Charset.forName("UTF-8"));
-		lines2.stream().forEach(printer);
+//		List<String> lines2 = FileUtils.readLines(new File("datos.csv"), Charset.forName("UTF-8"));
+//		lines2.stream().forEach(printer);
 		
 	}
 
