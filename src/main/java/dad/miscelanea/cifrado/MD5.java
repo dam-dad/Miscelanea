@@ -1,4 +1,4 @@
-package dad.javafx.miscelanea.cifrado;
+package dad.miscelanea.cifrado;
 
 import org.apache.commons.codec.digest.DigestUtils;
 

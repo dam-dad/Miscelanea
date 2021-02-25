@@ -1,4 +1,4 @@
-package dad.javafx.miscelanea.ficheros;
+package dad.miscelanea.ficheros;
 
 import java.io.BufferedReader;
 import java.io.File;
